@@ -5,20 +5,22 @@
             condition 
             ?checkedIn?
 """
-class Item: 
-    def_init(self, item_id, name, condition)
-        pass
-    
-    def _str_(self):
+class Item:
+    def __init__(self, item_id, name, condition):
+        self.item_id = item_id
+        self.name = name
+        self.condition = condition
+
+    def __str__(self):
         return f"Id:{self.item_id}\tName:{self.name}\tCondition:{self.condition}"
 
 
 
-
-
-if _name_ == "_main_":
+if __name__ == "__main__":
     item_one = Item(0, "book", "used")
-item_two = item(1, "water bottle", "new')
-print(item_one)
-print(item_two)
+    item_two = Item(1, "water bottle", "new")
 
+    print(item_one)
+    print(item_two)
+
+    

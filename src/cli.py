@@ -25,9 +25,15 @@ def menu():  # Prints Menu Options for the user
 
 
 def list_items():  # Writes all items to the Terminal
-    for item in items:
-        print(item)
+    """
+    TODO
+    1) Read the file into python
+    2) Parse the file into usable data
+    3) Print out each item in the file
+    """
 
+    with open('inventory.csv, 'r') as file:
+        csv_reader = csv.DictReader()
 
 def new_item():  # Gets user input for all need fields for an Item
     global next_id  # Allows us access to the next_id number
